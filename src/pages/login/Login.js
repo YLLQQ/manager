@@ -18,7 +18,7 @@ class Login extends React.Component {
 
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
-                <Form.Item wrapperCol={{ span: 5, offset: 1 }}>
+                <Form.Item wrapperCol={{ span: 4 }}>
                     {getFieldDecorator('username', {
                         rules: [{ required: true, message: 'Please input your username!' }],
                     })(
@@ -28,7 +28,7 @@ class Login extends React.Component {
                         />,
                     )}
                 </Form.Item>
-                <Form.Item wrapperCol={{ span: 5, offset: 1 }}>
+                <Form.Item wrapperCol={{ span: 4 }}>
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: 'Please input your Password!' }],
                     })(
@@ -39,18 +39,10 @@ class Login extends React.Component {
                         />,
                     )}
                 </Form.Item>
-                <Form.Item wrapperCol={{ span: 5, offset: 1 }}>
-                    {getFieldDecorator('remember', {
-                        valuePropName: 'checked',
-                        initialValue: true,
-                    })(<Checkbox>Remember me</Checkbox>)}
-                    <a className="login-form-forgot" href="">
-                        Forgot password
-                    </a>
+                <Form.Item wrapperCol={{ span: 4 }}>
                     <Button type="primary" htmlType="submit" className="login-form-button" block="true">
                         Log in
                     </Button>
-                    Or <a href="">register now!</a>
                 </Form.Item>
             </Form>
         );
